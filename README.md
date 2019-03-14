@@ -24,6 +24,8 @@ pyspider based cryptoSensor
 
 假设：有些平台和Key Opinion Leader是更有效的
 
+What is Effective: Scammer and bad (how to define?) opinion leader can be effective
+
 拟监测：TG, Cryptopanic, Coinmetrics.io, Exchange公告/API监控原型urlmonitor
 热点：discord power user是哪些，移动到哪个主题/币种,coinbase公告
 市场热度：老Twitter/微博用户第一次提起BTC 人/天；王团长的阅读量;
