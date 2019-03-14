@@ -1,87 +1,51 @@
-pyspider [![Build Status]][Travis CI] [![Coverage Status]][Coverage] [![Try]][Demo]
-========
+pyspider based cryptoSensor
 
-A Powerful Spider(Web Crawler) System in Python. **[TRY IT NOW!][Demo]**
-
-- Write script in Python
-- Powerful WebUI with script editor, task monitor, project manager and result viewer
-- [MySQL](https://www.mysql.com/), [MongoDB](https://www.mongodb.org/), [Redis](http://redis.io/), [SQLite](https://www.sqlite.org/), [Elasticsearch](https://www.elastic.co/products/elasticsearch); [PostgreSQL](http://www.postgresql.org/) with [SQLAlchemy](http://www.sqlalchemy.org/) as database backend
-- [RabbitMQ](http://www.rabbitmq.com/), [Beanstalk](http://kr.github.com/beanstalkd/), [Redis](http://redis.io/) and [Kombu](http://kombu.readthedocs.org/) as message queue
-- Task priority, retry, periodical, recrawl by age, etc...
-- Distributed architecture, Crawl Javascript pages, Python 2.{6,7}, 3.{3,4,5,6} support, etc...
-
-Tutorial: [http://docs.pyspider.org/en/latest/tutorial/](http://docs.pyspider.org/en/latest/tutorial/)  
-Documentation: [http://docs.pyspider.org/](http://docs.pyspider.org/)  
-Release notes: [https://github.com/binux/pyspider/releases](https://github.com/binux/pyspider/releases)  
-
-Sample Code 
------------
-
-```python
-from pyspider.libs.base_handler import *
+市场预判
 
 
-class Handler(BaseHandler):
-    crawl_config = {
-    }
 
-    @every(minutes=24 * 60)
-    def on_start(self):
-        self.crawl('http://scrapy.org/', callback=self.index_page)
+多币种共存只会愈演愈烈，比特币相对份额将继续下跌，传统Quant的势力未必足以覆盖niche币种（他们觉得只有比特币有足够量化数据？）
 
-    @config(age=10 * 24 * 60 * 60)
-    def index_page(self, response):
-        for each in response.doc('a[href^="http"]').items():
-            self.crawl(each.attr.href, callback=self.detail_page)
-
-    def detail_page(self, response):
-        return {
-            "url": response.url,
-            "title": response.doc('title').text(),
-        }
-```
-
-[![Demo][Demo Img]][Demo]
+按有效市场理论，趋势不可预测，但是可以及时检测并利用。
 
 
-Installation
-------------
-
-* `pip install pyspider`
-* run command `pyspider`, visit [http://localhost:5000/](http://localhost:5000/)
-
-**WARNING:** WebUI is open to the public by default, it can be used to execute any command which may harm your system. Please use it in an internal network or [enable `need-auth` for webui](http://docs.pyspider.org/en/latest/Command-Line/#-config).
-
-Quickstart: [http://docs.pyspider.org/en/latest/Quickstart/](http://docs.pyspider.org/en/latest/Quickstart/)
-
-Contribute
-----------
-
-* Use It
-* Open [Issue], send PR
-* [User Group]
-* [中文问答](http://segmentfault.com/t/pyspider)
 
 
-TODO
-----
-
-### v0.4.0
-
-- [ ] a visual scraping interface like [portia](https://github.com/scrapinghub/portia)
+基本面数据
+团队背景，技术实力，规划，生态
+技术面数据
+资金，价格波动，市场情绪，炒作hype
 
 
-License
--------
-Licensed under the Apache License, Version 2.0
+从Loom/ENJ走势可以看出技术实力未必能决定中期走势（6个月-1年）。近期价格和大资金及市场追捧关系更大(辣鸡PAI, WICC, Incompetent TRON)，所以以上两套检测标准必须并行。
 
 
-[Build Status]:         https://img.shields.io/travis/binux/pyspider/master.svg?style=flat
-[Travis CI]:            https://travis-ci.org/binux/pyspider
-[Coverage Status]:      https://img.shields.io/coveralls/binux/pyspider.svg?branch=master&style=flat
-[Coverage]:             https://coveralls.io/r/binux/pyspider
-[Try]:                  https://img.shields.io/badge/try-pyspider-blue.svg?style=flat
-[Demo]:                 http://demo.pyspider.org/
-[Demo Img]:             https://github.com/binux/pyspider/blob/master/docs/imgs/demo.png
-[Issue]:                https://github.com/binux/pyspider/issues
-[User Group]:           https://groups.google.com/group/pyspider-users
+
+
+假设：有些平台和Key Opinion Leader是更有效的
+
+拟监测：TG, Cryptopanic, Coinmetrics.io, Exchange公告/API监控原型urlmonitor
+热点：discord power user是哪些，移动到哪个主题/币种,coinbase公告
+市场热度：老Twitter/微博用户第一次提起BTC 人/天；王团长的阅读量;
+
+可（作为兴趣研发）：白皮书\MileStone和实际进度的自动语义匹配；团队人员的变动(Linkedin, 媒体通告）；关键coder类似BM是否身兼多值。各支持资本的风格
+
+有伪命题要排除（ not washing trading. 新近辞职-重大未披露？/早期宣传airdop/豪羊毛力度、早期持币成本）
+
+
+其他可选方向：
+看算力（约等于资金）认同哪个算法，最后哪个算法能更高效地自循环（促进经济循环，然后吸引到更多算力）。算力比市场资金对热点先敏感
+交易所价差
+市场交易之外获得Top100 Crypto的机会（quiz, faucet, airdrop)
+场外交易数据（抹茶，CEO,火狐狸？）
+
+维度通用分类：
+1.创始人过往经验，能力和声誉
+2.团队的技术厚度，广度，营销能力
+3.技术线路-vision,已有突破
+4.项目资源-已募集资金，dapp,行业合作伙伴，可核实的board或advisor
+5.项目前景-是否已有竞争对手
+
+
+Tested metrics in 2018 prototype design
+
