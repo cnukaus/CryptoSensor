@@ -1,5 +1,8 @@
 pyspider based cryptoSensor
 
+## to do list
+### 1. 值得分析并自动匹配答案的市场:Augur，类似https://predictions.global/augur-markets/-will-the-moon-exist-at-end-of-april-24th-0x156eedfa2d05548ae41e7dda34d2b09e2a2f6132 还有50%Fee的利润模型
+
 市场预判
 
 
