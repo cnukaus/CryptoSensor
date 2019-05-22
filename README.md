@@ -4,6 +4,7 @@ pyspider based cryptoSensor
 #### 1. 值得分析并自动匹配答案的市场:Augur，类似https://predictions.global/augur-markets/-will-the-moon-exist-at-end-of-april-24th-0x156eedfa2d05548ae41e7dda34d2b09e2a2f6132 还有50%Fee的利润模型\
 #### 2. cok wechat recovery to do text analysis 
 (key group for time series of MX, Kcash, LAMB, BOLT, ANKR, BIKI, RIF, MVT, VBT, VDS, FDS
+#### 3.最低风险量化在DAI
 
 模型的灵感来自于 Willy Woo 的工作，Willy 第一个提出使用谷歌趋势服务的数据来预测比特币价格的走向。
 新闻检测价格模型：https://www.kaggle.com/c/two-sigma-financial-news
