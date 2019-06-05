@@ -53,7 +53,12 @@ What is Effective: Scammer and bad (how to define?) opinion leader can be effect
 市场交易之外获得Top100 Crypto的机会（quiz, faucet, airdrop)
 场外交易数据（抹茶，CEO,火狐狸？）
 
+可用数据集： [ETH data] (https://console.cloud.google.com/bigquery?project=aqueous-charger-188403&folder&organizationId&p=bigquery-public-data&d=crypto_ethereum_classic&page=dataset) (注意改过名字） 大约季度更新
+
+
+
 维度通用分类：
+币种级别coinmarketcap筛选：两个宏观量：市值爬升/Total Cap (of top 100)；大额交易占比
 1.创始人过往经验，能力和声誉
 2.团队的技术厚度，广度，营销能力
 3.技术线路-vision,已有突破
