@@ -9,8 +9,8 @@ pyspider based cryptoSensor
 模型的灵感来自于 Willy Woo 的工作，Willy 第一个提出使用谷歌趋势服务的数据来预测比特币价格的走向。
 新闻检测价格模型：https://www.kaggle.com/c/two-sigma-financial-news
 市场预判
-套利判定：peregrine
-套利执行：Triangle-arbitrage
+套利判定：peregrine或https://hackernoon.com/bch-pre-fork-arbitrage-trading-idea-fcac026255d5
+套利执行：Triangle-arbitrage.
 
 
 
